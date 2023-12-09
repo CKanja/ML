@@ -7,8 +7,8 @@ from skimage import io, color, transform
 from tensorflow.keras.preprocessing import image
 from PIL import Image
 import pickle
-import streamlit as st
 import time
+
 
 # Set the page configuration
 st.set_page_config(
@@ -46,34 +46,11 @@ st.markdown(
 uploaded_image = st.file_uploader("Upload an image of the forest", type=["jpg", "png", "jpeg"])
 image_path2 = "test1.jpeg"
 
-import cv2
-
-import streamlit as st
-import cv2
-from skimage.metrics import structural_similarity
-
-# Load the base image
-base_image = cv2.imread('fire.png')
-
-# #Define the function to calculate image similarity
-# def compare_images(image1, image2):
-
-#     test_image_resized = cv2.resize(test_image, (base_image.shape[1], base_image.shape[0]))
-#     # Convert images to grayscale
-    
-#     image1_gray = cv2.cvtColor(base_image, cv2.COLOR_BGR2GRAY)
-#     image2_gray = cv2.cvtColor(test_image_resized, cv2.COLOR_BGR2GRAY)
-
-#     # Calculate structural similarity index (SSIM)
-#     ssim_score = structural_similarity(image1_gray, image2_gray)
-
-#     return ssim_score
 
 
 
 
-import cv2
-from skimage.metrics import structural_similarity
+
 
 
 
