@@ -35,6 +35,8 @@ st.image(banner_image, use_column_width=True)
 
 # Title and description
 st.title("Forest Fire Detection App")
+
+st.subheader("This is a Wildfire Detection App. Given an image of a forest, the model predicts where there is prescence of fire in the image or not.")
 #st.markdown("Upload an image and receive see where your product fits.")
 st.markdown(
     """
@@ -43,7 +45,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # File uploader
-uploaded_image = st.file_uploader("Upload an image of the forest", type=["jpg", "png", "jpeg"])
+uploaded_image = st.file_uploader("Upload an image of the Forest", type=["jpg", "png", "jpeg"])
 image_path2 = "test1.jpeg"
 
 
@@ -157,11 +159,11 @@ if st.button("Generate Feedback"):
 
     # Implement your feedback generation logic here
     if prediction <= 0.55:
-        feedback = "There is a high likelihood of the occurence of fire. Sending alert to authorities..."#generate_feedback(uploaded_image)
+        feedback = "There is presence of fire in this image. Sending alert to authorities..."#generate_feedback(uploaded_image)
         #feedback_text.write(feedback)
         st.error(feedback)
     elif prediction > 0.55 :
-        feedback = "There is no fire"#generate_feedback(uploaded_image)
+        feedback = "There is no presence of fire in this image."#generate_feedback(uploaded_image)
         #feedback_text.write(feedback)
         st.success(feedback)
  
